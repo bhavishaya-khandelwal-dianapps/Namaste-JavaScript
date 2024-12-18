@@ -54,6 +54,4 @@ api.createOrder(cart, function() {
     api.proceedToPayment()
 })
 
-
-
 //todo --- Async programming exixt in JS, only because callback exists. 

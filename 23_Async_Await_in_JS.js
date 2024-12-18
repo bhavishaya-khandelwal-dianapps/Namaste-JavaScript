@@ -63,7 +63,7 @@ function getTheData() {
     console.log("Namaste JavaScript");
 }
 
-// getTheData();
+getTheData();
 
 
 
