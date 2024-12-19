@@ -1,4 +1,5 @@
 //* Promises :- Promises are used to handle async operations in JS. 
+//? A promise is an object that represent the eventaul completion or failure of any asynchronous opeartion.
 
 
 const cart = ["shoes", "pants", "kurta"];
@@ -78,7 +79,7 @@ const user = fetch(GITHUB_API);
 //! Que : 2 What is callback hell in JS...??? 
 //? So according to the MDN Docs, callback hell is a situation in JavaScript where multiple nested callback functions make code difficult to read and debug. 
 //* Or we can say that callback hell occurs when multiple callbacks are nested within each other, 
-//?Or it also happens, when we are dealing with asynchronous operations that depends on each other. 
+//? Or it also happens, when we are dealing with asynchronous operations that depends on each other. 
 
 
 //! Que : 3 What is callback function in JS...??
@@ -90,6 +91,7 @@ const user = fetch(GITHUB_API);
 //? Promise chaining in JS is a technique that uses .then() and .catch() methods to sequentially handle asynchronous operations. It allows developers to pass the results of one promise to the next as input, creating a chain of promises. 
 //todo ---NOTE :- Always return a promise from a promise when we are chaining it. 
 
+
 createOrder(cart)
 .then(function (orderId) {
     return proceedToPayment(orderId);
@@ -99,6 +101,25 @@ createOrder(cart)
 })
 .then(function (paymentInfo) {
     return updateWalletBalance(paymentInfo); 
+})
+.catch((error) => {
+    console.log(error);
+})
+
+
+
+
+
+//? This is how we create promise chaining 
+createOrder(cart)
+.then((orderId) => {
+    return proceedToPayment(orderId);
+})
+.then((paymentInfo) => {
+    return showOrderSummary(paymentInfo);
+})
+.then((paymentInfo) => {
+    updateWalletBalance(paymentInfo);
 })
 .catch((error) => {
     console.log(error);

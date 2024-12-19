@@ -1,4 +1,4 @@
-//todo 1. Promise.all() : It is used to handl multiple API calls together.
+//todo 1. Promise.all() : It is used to handle multiple API calls together.
 //? It takes an array of promises as input.
 
 //!  Promise.all([p1, p2, p3]);
@@ -40,12 +40,13 @@
 //* Promise.allSettled([p1, p2, p3]);
 
 
+
 //! Case 1 :- 
 //* p1 -> 3sec -> success 
 //* p2 -> 1sec -> success 
 //* p3 -> 2sec -> success 
 //?=======================OUTPUT :- 
-//?=======================Will get after 3seconds  [val1, val2, val3]
+//?=======================Will get after 3 seconds  [val1, val2, val3]
 
 
 

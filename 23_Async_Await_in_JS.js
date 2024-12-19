@@ -60,10 +60,11 @@ function getTheData() {
     p.then((res) => {
         console.log(res);
     })
+    
     console.log("Namaste JavaScript");
 }
 
-getTheData();
+// getTheData();
 
 
 
