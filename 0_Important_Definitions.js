@@ -25,7 +25,7 @@
 
 
 //* Closure -> 
-//? A function along with its parent lexical environment. 
+//? A function along with its parent lexical environment forms a closure. 
 //? A closure in JavaScript is a function that has access to its outer scope, or the lexical environment, even after the outer function has finished executing.
   
 
